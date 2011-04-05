@@ -2,7 +2,7 @@
 
 Forked from Owen Anderson's [spritepack](https://github.com/resistor/spritepack).
 
-This program is primarily for creating sprite sheets for OpenGL and OpenGL ES applications.  It takes multiple sets of png files as input, and then outputs png atlas files to cover all of the input files.  The output files can be loaded as textures with your favourite PNG loader.  The output files also contain metadata from the sprite data, indicating the size and location of each individual sprite.
+This program is primarily for creating sprite atlases for OpenGL and OpenGL ES applications.  It takes multiple sets of png files as input, and then outputs png atlas files to cover all of the input files.  The output files can be loaded as textures with your favourite PNG loader.  The output files also contain metadata about the input files, the size and location of each individual sprite on the generated image.
 
 The primary difference between this program and the original is that this program has a maximum output file image size, and it will split the input sprite images across several output files, depending on how many output images are required to fit all the input images.  The current default maximum size is 1024x1024 pixels, but ideally this should be the result of the following GL function call on the target system:
 
@@ -56,7 +56,7 @@ If, for example, the images in one of the paths are too big for one single outpu
 
 ## TROUBLESHOOTING
 
-If images are large (e.g. width or height is > 50% of the maximum texture size) it will just fail to be inserted into an output image.  If this happens it's best to split up your images into sub folders and process each folder separately.  Large images should probably not be put into spritesheets, anyway.
+If an images is large (e.g. width or height is > 50% of the maximum texture size) it's possible that the packer fail to find an adequate packing configuration for it.  From that point of view, the sprite packer works best with lots of small images, rather than a small number of large ones.
 
 
 ## TODO
