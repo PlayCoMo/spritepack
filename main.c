@@ -286,11 +286,6 @@ void create_sprite_sheet(img_t ** sub_images, const unsigned int sub_image_count
                  /* top left corner */     sub_images[i]->offset_x, sub_images[i]->offset_y,
                  /* bottom right corner */ sub_images[i]->offset_x + sub_images[i]->w,  sub_images[i]->offset_y + sub_images[i]->h,
                  /* center offset */       sub_images[i]->center_x, sub_images[i]->center_y);
-        /*
-        printf("%s: Offset: (%d, %d), Size: (%d, %d)\n", 
-               sub_images[i]->filename, 
-               sub_images[i]->offset_x, sub_images[i]->offset_y,
-               sub_images[i]->pixel_width, sub_images[i]->pixel_height);*/
         
         while (strlen(comments.text) + strlen(output) + 1 > text_space) {
             text_space *= 2;

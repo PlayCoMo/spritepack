@@ -9,8 +9,6 @@ The primary difference between this program and the original is that this progra
     GLint texSize; 
     glGetIntegerv(GL_MAX_TEXTURE_SIZE, &texSize);
 
-In addition to this, this program inserts metadata inside each of the output png files so you can trace a particular input image to a particular output image, and thus use this information to render the correct texture data in your client application.
-
 Finally, the program inserts a border around each input file, in case you wish to use the resulting spritesheet for mipmapping.  The default border size is 4 pixels.
 
 
