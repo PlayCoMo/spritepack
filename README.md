@@ -45,7 +45,7 @@ You will get, at minimum, three files:
     ~/out/monster1.png
     ~/out/goldcoins1.png
 
-If, for example, the images in one of the paths need to be spread across multiple out put files, you'll get something like:
+If, for example, the images in one of the paths are too big for one single output image, this program will spread across as many output images as required, so you'll get something like:
 
     ~/out/spaceship1.png
     ~/out/spaceship2.png
