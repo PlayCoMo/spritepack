@@ -244,7 +244,10 @@ void create_sprite_sheet(img_t ** sub_images, const unsigned int sub_image_count
     // A packing could NOT be found for these images.
     if (ret == NULL)
     {
-        fprintf(stderr, "ERROR: Could not find a valid packing configuration.\n");
+        fprintf(stderr, "ERROR: Could not find a valid packing configuration for the following files:\n");
+        for (i = 0; i < sub_image_count; ++i) {
+            fprintf(stderr, "\t%s\n", sub_images[i]->filename);
+        }
         return;
     }
     

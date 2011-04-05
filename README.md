@@ -54,6 +54,11 @@ If, for example, the images in one of the paths need to be spread across multipl
 ...and so forth.
 
 
+## TROUBLESHOOTING
+
+If images are large (e.g. width or height is > 50% of the maximum texture size) it will just fail to be inserted into an output image.  If this happens it's best to split up your images into sub folders and process each folder separately.  Large images should probably not be put into spritesheets, anyway.
+
+
 ## TODO
 
-I will add options to configure the max texture size, the border width, and whether the program recurses through the input folder paths or not.
+Add options to configure the max texture size, the border width, and whether the program recurses through the input folder paths or not.
