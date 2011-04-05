@@ -56,7 +56,7 @@ If, for example, the images in one of the paths are too big for one single outpu
 
 ## TROUBLESHOOTING
 
-If an images is large (e.g. width and/or height is > 50% of the maximum texture size) it's possible that the image packing algorithm will fail to find an adequate packing configuration for it.  The sprite packer works best with lots of small images, rather than a small number of large ones.
+If an input image has a width and/or height greater than 50% of the maximum texture size, it is likely that the image packing algorithm will fail to find an adequate packing configuration for the image.  The sprite packer works best with lots of small images, rather than a small number of large ones.
 
 
 ## TODO
