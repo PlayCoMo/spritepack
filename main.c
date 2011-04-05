@@ -473,15 +473,13 @@ int main(int argc, char** argv)
     max_size = DEFAULT_MAX_SIZE;
     border_width = DEFAULT_BORDER_WIDTH;
     
-    
-    int argcount = 0;
-    
     if (argc < 3)
     {
         fprintf(stderr, "Usage: spritepack out_path in_file_path_1 in_file_path_2 ...\n");
         exit(-1);
     }
     
+    int argcount;
     for (argcount = 2; argcount < argc; argcount++)
     {
         char * inpath = argv[argcount];
@@ -493,9 +491,10 @@ int main(int argc, char** argv)
         }
         else if (strlen(inpath) > 0)
         {
-            if (inpath[len-1] == '/') inpath[len-1] = 0;
-            char * c = strrchr(inpath, '/');
-            spritepack(argv[1], c+1, inpath);
+            if (inpath[len-1] == '/') 
+                inpath[len-1] = 0;
+            char * out_prefix = strrchr(inpath, '/') + 1;
+            spritepack(argv[1], out_prefix, inpath);
         }
     }
     
