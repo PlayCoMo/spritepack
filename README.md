@@ -29,9 +29,9 @@ is the location where you want output files to go.
 
 And
 
-    in_file_paths: 
+    in_file_path_1 in_file_path_2 ... 
 
-is a directory where png files are located.  All the png files found in the input location will be processed.  By default, the program will recurse through the input directory.
+are directories where png files are located.  All the png files found in these location will be processed.  By default, the program will recurse through each input directory.
 
 Each output file will take the name of the top folder name in the given infile_path, followed by a number indicating which file it is.
 
