@@ -10,6 +10,7 @@ typedef struct Img {
     unsigned center_x, center_y;
     unsigned top, left;
     unsigned w, h;
+    unsigned pixel_width, pixel_height;
 } img_t;
 
 void autotrim(img_t* i);
