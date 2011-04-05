@@ -2,7 +2,7 @@
 
 Forked from Owen Anderson's [spritepack](https://github.com/resistor/spritepack).
 
-This program is primarily for creating sprite sheets for OpenGL and OpenGL ES applications.  It takes multiple sets of png files as input, and then outputs png atlas files to cover all of the input files.  The output files can be loaded as textures with your favourite PNG loader.
+This program is primarily for creating sprite sheets for OpenGL and OpenGL ES applications.  It takes multiple sets of png files as input, and then outputs png atlas files to cover all of the input files.  The output files can be loaded as textures with your favourite PNG loader.  The output files also contain metadata from the sprite data, indicating the size and location of each individual sprite.
 
 The primary difference between this program and the original is that this program has a maximum output file image size, and it will split the input sprite images across several output files, depending on how many output images are required to fit all the input images.  The current default maximum size is 1024x1024 pixels, but ideally this should be the result of the following GL function call on the target system:
 
